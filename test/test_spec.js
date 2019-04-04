@@ -4,7 +4,7 @@ describe('Protractor demo', () => {
   var mainPage 
 
 beforeEach(function(){
-    
+
         browser.ignoreSynchronization = true
         browser.get('http://duckduckgo.com')
 
@@ -18,5 +18,9 @@ beforeEach(function(){
 
         expect(element(by.className('module__body js-about-item')).isPresent()).toBe(true)
         browser.sleep(5000)
+    })
+
+    it('Simple test with PO', function() {
+        mainPage.searchInput.sendKeys('Lorum ipsum')
     })
 })
